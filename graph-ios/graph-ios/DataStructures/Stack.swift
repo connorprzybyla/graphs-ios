@@ -22,10 +22,11 @@ struct Stack<T> {
     }
     
     mutating func pop() -> T {
-        return items.removeFirst()
+        guard let last = items.last else { fatalError("Stack is empty.") }
+        return last
     }
   
     mutating func push(_ element: T) {
-        items.insert(element, at: 0)
+        items.append(element)
     }
 }
