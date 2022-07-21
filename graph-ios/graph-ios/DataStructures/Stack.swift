@@ -18,7 +18,7 @@ struct Stack<T> {
     }
     
     func size() -> Int {
-        return items.count
+        items.count
     }
     
     mutating func pop() -> T {
